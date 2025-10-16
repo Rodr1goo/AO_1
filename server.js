@@ -46,7 +46,7 @@ async function asegurarData() {
   }
 }
 
-// Lee el cuerpo (POST) y lo convierte con URLSearchParams (tal como pide la guía)
+// Lee el cuerpo (POST) y lo convierte con URLSearchParams
 
 async function leerCuerpo(req) {
   const chunks = [];
@@ -189,7 +189,7 @@ const servidor = http.createServer(async (req, res) => {
         `Mensaje: ${String(mensaje).trim()}`,
         '-------------------------',
         ''
-      ].join('\n');
+      ].join('\n'); // \n al final para separar bloques
 
       await fs.appendFile(archivoConsultas, bloque, 'utf8'); // guarda al final (crea si no existe)
 
