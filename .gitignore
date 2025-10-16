@@ -5,3 +5,6 @@ dist/
 tmp/
 .DS_Store
 data/consultas.txt
+
+# datos generados
+data/consultas.txt
