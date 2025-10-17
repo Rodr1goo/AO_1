@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "380a34b2-3e17-4cf3-bcf2-7a2391e227dd",
+		"name": "postman_Agrotrack",
+		"description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49342007",
+		"_collection_link": "https://rodr1goo-2105311.postman.co/workspace/Rodrigo's-Workspace~18da9a01-2623-471b-852b-b2226043a0a0/collection/49342007-380a34b2-3e17-4cf3-bcf2-7a2391e227dd?action=share&source=collection_link&creator=49342007"
+	},
+	"item": [
+		{
+			"name": "index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "contacto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/contacto",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"contacto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contacto listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/contacto/listar",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"contacto",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "rodrigo@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseURL}}/auth/recuperar",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"auth",
+						"recuperar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contacto cargar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "rodrigo flores",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "rodri@email.com.ar",
+							"type": "text"
+						},
+						{
+							"key": "mensaje",
+							"value": "probando nuevamente 2.0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseURL}}/contacto/cargar",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"contacto",
+						"cargar"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": ""
+		}
+	]
+}
