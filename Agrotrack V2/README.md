@@ -91,35 +91,33 @@ Incluye pruebas de:
 ✔ GET /
 
 
+---
 
 ## Estructura del proyecto
 
-
-
+```
 Agrotrack V2/
 ├── middleware/
-│ ├── logger.js
-│ └── errorHandler.js
+│   ├── logger.js
+│   └── errorHandler.js
 ├── public/
-│ ├── index.html
-│ ├── contacto.html
-│ ├── productos.html
-│ └── login.html
+│   ├── index.html
+│   ├── contacto.html
+│   ├── productos.html
+│   └── login.html
 ├── routes/
-│ └── contactos.js
+│   └── contactos.js
 ├── sql/
-│ └── schema.sql
+│   └── schema.sql
 ├── app.js
 ├── db.js
 ├── .env.example
 ├── package.json
 └── README.md
-
-
-
-
+```
 
 ---
+
 
 ## Autor
 
