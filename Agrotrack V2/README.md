@@ -94,19 +94,21 @@ Incluye pruebas de:
 
 ## Estructura del proyecto
 
+
+
 Agrotrack V2/
 ├── middleware/
-│   ├── logger.js
-│   └── errorHandler.js
+│ ├── logger.js
+│ └── errorHandler.js
 ├── public/
-│   ├── index.html
-│   ├── contacto.html
-│   ├── productos.html
-│   └── login.html
+│ ├── index.html
+│ ├── contacto.html
+│ ├── productos.html
+│ └── login.html
 ├── routes/
-│   └── contactos.js
+│ └── contactos.js
 ├── sql/
-│   └── schema.sql
+│ └── schema.sql
 ├── app.js
 ├── db.js
 ├── .env.example
@@ -116,9 +118,13 @@ Agrotrack V2/
 
 
 
-Autor
 
-Rodrigo Flores
-Tecnicatura Universitaria en Desarrollo de Aplicaciones Informáticas — IUA
+---
+
+## Autor
+
+Rodrigo Flores  
+Tecnicatura Universitaria en Desarrollo de Aplicaciones Informáticas — IUA  
 Año 2025
+
 
