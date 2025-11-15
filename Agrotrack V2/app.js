@@ -1,7 +1,3 @@
-// ============================
-//  AGROTRACK V2 - Servidor Express
-// ============================
-
 require('dotenv').config(); // Carga variables desde .env
 const express = require('express');
 const path = require('path');
@@ -9,15 +5,15 @@ const logger = require('./middleware/logger');
 const errorHandler = require('./middleware/errorHandler');
 const contactosRouter = require('./routes/contactos');
 
-// Crear la aplicación Express
+// con esto se crea la aplicación Express
 const app = express();
 
 // Puerto configurado en .env o 3000 por defecto
 const PORT = process.env.PORT || 3000;
 
-// ============================
-//  Middleware globales
-// ============================
+
+// Middleware
+
 
 // Permite interpretar JSON en las solicitudes POST
 app.use(express.json());
@@ -31,23 +27,35 @@ app.use(logger);
 // Servir archivos estáticos desde /public
 app.use(express.static(path.join(__dirname, 'public')));
 
-// ============================
-//  Rutas principales
-// ============================
 
-// Página principal (GET /)
+//  Rutas principales
+
+
+// Páginas (GET /)
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
+
+app.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'login.html'));
+});
+
+app.get('/contacto', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'contacto.html'));
+});
+app.get('/productos.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'productos.html'));
+});
+
 
 // Endpoint de verificación
 app.get('/health', (req, res) => {
   res.json({ status: 'ok' });
 });
 
-// ============================
+
 //  Login simulado (sin base de datos)
-// ============================
+
 app.post('/login', (req, res) => {
   const { usuario, clave } = req.body;
 
@@ -68,14 +76,13 @@ app.post('/login', (req, res) => {
 // Rutas de la API (contactos)
 app.use('/api/contactos', contactosRouter);
 
-// ============================
-//  Middleware de errores
-// ============================
+
+//  Middleware de error
 app.use(errorHandler);
 
-// ============================
+
 //  Arrancar el servidor
-// ============================
+
 app.listen(PORT, () => {
   console.log(`Servidor iniciado en http://localhost:${PORT}`);
 });

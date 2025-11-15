@@ -1,6 +1,5 @@
-// ============================
+
 //  Conexión a MySQL - AgroTrack V2
-// ============================
 
 require('dotenv').config();
 const mysql = require('mysql2');
