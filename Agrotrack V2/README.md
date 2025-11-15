@@ -5,14 +5,18 @@ Implementa un servidor **Express .js** con API REST y conexión a **MySQL**.
 
 ---
 
-## 🚀 Características
+## Características principales
 
-- Servidor **Express** (puerto configurable por `.env`).
-- Archivos estáticos servidos desde `/public`.
-- Endpoints REST para **contactos**.
-- Middleware de **logger** y **manejo de errores**.
-- Conexión a **MySQL** mediante `mysql2` y variables de entorno (`dotenv`).
-- Colección **Postman** incluida.
+- Servidor **Express.js** con puerto configurable vía `.env`.
+- Archivos estáticos servidos desde la carpeta **/public**.
+- API REST para gestionar **contactos**.
+- Middleware de:
+  -  Logger de peticiones  
+  -  Manejador de errores
+- Conexión a **MySQL** utilizando `mysql2`.
+- Variables de entorno con `dotenv`.
+- Colección **Postman** incluida con pruebas reales de la API.
+- Validaciones y manejo de estados HTTP.
 
 ---
 
@@ -51,6 +55,11 @@ CREATE TABLE IF NOT EXISTS contactos (
 
 npm start
 
+## El servidor iniciará en:
+
+http://localhost:8888
+
+
 
 ## Rutas principales
 
@@ -58,31 +67,30 @@ npm start
 | -------- | ---------------- | -------------------------------------- |
 | **GET**  | `/`              | Página principal (`index.html`)        |
 | **GET**  | `/health`        | Estado del servidor                    |
-| **GET**  | `/login`         | Muestra formulario de inicio de sesión |
+| **GET**  | `/login.html`    | Muestra formulario de inicio de sesión |
 | **POST** | `/login`         | Valida usuario y clave (simulado)      |
 | **GET**  | `/api/contactos` | Lista todos los contactos              |
 | **POST** | `/api/contactos` | Agrega un nuevo contacto               |
 
 
-🧪 Colección Postman
+ Colección Postman
 
-Archivo: Agrotrack V2.postman_collection.json
-Incluye ejemplos de:
+Archivo: AgrotrackV2_RodrigoFlores_postman_collection.json
+Incluye pruebas de:
 
-GET /api/contactos
+✔ GET /health
 
-POST /api/contactos
+✔ GET /api/contactos
 
-POST /login
+✔ POST /api/contactos (válido)
 
-GET /health
+✔ POST /api/contactos (inválido)
+
+✔ POST /login
+
+✔ GET /
 
 
-👨‍💻 Autor
-
-Rodrigo Flores
-Tecnicatura Universitaria en Desarrollo de Aplicaciones Informáticas — IUA
-Año 2025
 
 ## Estructura del proyecto
 
@@ -105,5 +113,12 @@ Agrotrack V2/
 ├── package.json
 └── README.md
 
-📦 Versión: 2.0
-🗓️ Fecha: Noviembre 2025
+
+
+
+Autor
+
+Rodrigo Flores
+Tecnicatura Universitaria en Desarrollo de Aplicaciones Informáticas — IUA
+Año 2025
+
