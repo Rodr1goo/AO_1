@@ -3,7 +3,7 @@ const express = require('express')
 const router = express.Router()
 const db = require('../db')   // Importamos la conexión existente
 
-// GET /api/contactos → Listar
+// GET /api/contactos - Listar
 router.get('/', function (req, res) {
     const sql = 'SELECT * FROM contactos ORDER BY fecha DESC'
 
@@ -16,7 +16,7 @@ router.get('/', function (req, res) {
     })
 })
 
-// POST /api/contactos → Guardar
+// POST /api/contactos - Guardar
 router.post('/', function (req, res) {
     const nombre = req.body.nombre
     const email = req.body.email
